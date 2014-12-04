@@ -18,6 +18,9 @@ floating_modifier $mod
 hide_edge_borders both
 workspace_auto_back_and_forth yes
 
+#scratchpad
+bindsym $mod+shift+z move scratchpad 
+bindsym $mod+shift+a scratchpad show
 
 
 #background change
@@ -35,9 +38,6 @@ bindsym $mod+q kill
 #bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec i3-dmenu-desktop
 
-bindsym $mod+XF86PowerOff exec play /home/julian/Musik/buttons/no.mp3
-bindsym ctrl+XF86PowerOff exec play /home/julian/Musik/buttons/digimon.mp3
-bindsym Shift+XF86PowerOff exec play /home/julian/Musik/buttons/allein.mp3
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -183,6 +183,21 @@ mode "$mode_system" {
 bindsym $mod+Escape mode "$mode_system"
 #bindsym 38 exec $i3exit lock
 
+
+set $mode_soundboard (1)Leb Deinen Traum (2)No God Please (3)Ich pitch Projekte (4)Cricket Sound (5)leck mich am aaaaarsch (6)Tasty Burger (7)Thats what she said
+mode "$mode_soundboard" {
+    bindsym 2 exec play /home/julian/Musik/buttons/no.mp3
+    bindsym 1 exec play /home/julian/Musik/buttons/digimon.mp3
+    bindsym 3 exec play /home/julian/Musik/buttons/projekte.mp3
+    bindsym 4 exec play /home/julian/Musik/buttons/cricket.mp3
+    bindsym 5 exec play /home/julian/Musik/buttons/leckmich.mp3
+    bindsym 6 exec play /home/julian/Musik/buttons/burger.mp3
+    bindsym 7 exec play /home/julian/Musik/buttons/twss.mp3
+    bindsym Escape mode "default"
+}
+bindsym XF86PowerOff mode "$mode_soundboard"
+
+
 bindsym XF86WWW exec $BROWSER
 
 #screenshot
@@ -207,7 +222,7 @@ bar {
 }
 
 #assign programs to certain worksapce
-assign [class="^Chromium$"] 1: www
+assign [class="^Firefox$"] 1: www
 assign [class="^Thunderbird$"] 2: mail
 assign [class="^Pidgin$"] 9
 for_window [class=^Firefox$" instance="^Download$"] floating enable
@@ -216,8 +231,7 @@ assign [class="^Nitrotasks$"] 0: todo
 #autostart
 exec --no-startup-id nitrotasks
 exec --no-startup-id pidgin
-exec --no-startup-id chromium
+exec --no-startup-id firefox
 exec --no-startup-id thunderbird
 exec --no-startup-id /usr/libexec/xscreensaver-autostart
-exec --no-startup-id xautolock -locker "/usr/bin/i3lock -d"
 exec --no-startup-id /usr/libexec/polkit-mate-authentication-agent-1
