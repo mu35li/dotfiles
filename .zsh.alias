@@ -1,0 +1,19 @@
+# sudo aliases
+alias sc='sudo systemctl'
+alias spacman='sudo pacman'
+alias fuck='sudo pacman -Rsnv'
+alias svim='sudo vim'
+alias nc='sudo netctl'
+alias wifi-menu='sudo wifi-menu'
+alias wlan='sudo systemctl restart netctl-auto@wlp5s0.service'
+alias mnt='sudo mount'
+alias dafuq='journalctl -xrb'
+alias wtf='dmesg -eHwT'
+# git aliases
+alias gls='git status'
+alias glg='git lg'
+
+# other tools
+alias pdf='apvlv'
+alias clip='xclip -selection clipboard'
+
