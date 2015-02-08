@@ -12,8 +12,14 @@ alias wtf='dmesg -eHwT'
 # git aliases
 alias gls='git status'
 alias glg='git lg'
+alias gpl='git pull'
+alias glc='git commit -m'
+alias doch='sudo $(fc -ln -1)'
+alias spaceleft='df -h'
+alias get='yaourt'
 
 # other tools
 alias pdf='apvlv'
 alias clip='xclip -selection clipboard'
 
+source $(which virtualenvwrapper.sh)

@@ -21,8 +21,10 @@ DISABLE_AUTO_UPDATE="true"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+ #DISABLE_LS_COLORS="true"
 
+# colored completion - use my LS_COLORS
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
@@ -50,7 +52,7 @@ source ~/.zsh.alias
 source ~/.zsh.export
 
 #eval $(keychain --eval --agents ssh -Q --quiet ~/.ssh/id_rsa)
-
+eval $(dircolors ~/.dircolors);
 PATH=$PATH:/home/julian/.gem/ruby/2.1.0/bin
 export PATH
 
