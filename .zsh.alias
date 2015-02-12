@@ -16,7 +16,7 @@ alias gpl='git pull'
 alias glc='git commit -m'
 alias doch='sudo $(fc -ln -1)'
 alias spaceleft='df -h'
-alias get='yaourt'
+alias get='yaourt --noconfirm'
 
 # other tools
 alias pdf='apvlv'
