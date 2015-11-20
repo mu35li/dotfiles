@@ -1,0 +1,21 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"C Improved",
+		"DocBlockr",
+		"EditorConfig",
+		"Emmet",
+		"Package Control",
+		"SublimeLinter",
+		"SublimeLinter-contrib-clang",
+		"SublimeLinter-jshint",
+		"SublimeLinter-php",
+		"SublimeLinter-xmllint",
+		"WhoCalled Function Finder",
+		"Xdebug Client"
+	]
+}
