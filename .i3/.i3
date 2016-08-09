@@ -1,1 +1,0 @@
-/home/julian/.i3

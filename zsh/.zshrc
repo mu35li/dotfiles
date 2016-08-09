@@ -50,10 +50,13 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 source ~/.zsh.alias
 source ~/.zsh.export
+source /etc/profile.d/autojump.sh
 
 #eval $(keychain --eval --agents ssh -Q --quiet ~/.ssh/id_rsa)
 eval $(dircolors ~/.dircolors);
 PATH=$PATH:/home/julian/.gem/ruby/2.1.0/bin
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
+export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 export PATH
 
 
