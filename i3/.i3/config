@@ -226,7 +226,7 @@ mode "$mode_soundboard2" {
 bindsym XF86WWW exec $BROWSER
 
 #screenshot
-bindsym Print exec gnome-screenshot -i
+bindsym Print exec shutter
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -249,6 +249,7 @@ bar {
 #assign programs to certain worksapce
 assign [class="^Firefox$"] 1: www
 assign [class="^chromium$"] 1: www
+assign [class="^Chromium$"] 1: www
 assign [class="^Thunderbird$"] 2: mail
 assign [class="^Subl3"] 3
 assign [class="^Pidgin$"] 9
@@ -265,6 +266,7 @@ exec --no-startup-id /usr/libexec/polkit-mate-authentication-agent-1
 exec --no-startup-id redshift -t 3500:3500
 exec --no-startup-id xrandr --output DP1 --auto --left-of eDP1 --output DP2 --auto --right-of eDP1
 exec --no-startup-id subl3
+exec --no-startup-id feh --bg-fill ~/Downloads/EpUzn4Q.jpg
 
 new_window none
 gaps inner 10 
